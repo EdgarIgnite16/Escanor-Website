@@ -146,7 +146,7 @@ html {
     margin-top: 70px;
     padding-top: 60%;
     position: relative;
-    background: no-repeat url('/assets/img/esacanor-background-slider.jpg') top center / cover;
+    background: no-repeat url('assets/img/esacanor-background-slider.jpg') top center / cover;
 }
 
 
