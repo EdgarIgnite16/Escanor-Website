@@ -1,0 +1,374 @@
+/* reset css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: cursive;
+    background-color: rgba(4,4,4,255);
+    scroll-behavior: smooth;
+}
+/* commons  */
+
+.clear {
+    clear: both;
+}
+
+.row {
+
+}
+
+.col {
+
+}
+/*
+1.Vị Trí
+2.Kích Thước
+3.Màu sắc
+4.Kiểu Dáng (kiểu chữ, hình tròn,vuông,...v...v)
+*/
+
+#main{
+    width: 100%;
+    height: 100vh;
+}
+/* Phần Header */
+#header{
+    height: 70px;
+    background: linear-gradient(80deg,rgba(4,4,4,255),rgba(46, 46, 45, 0.931));
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+/* Phần Navigation */
+
+#nav {
+    display: inline-block;
+    list-style-type: none;
+}
+
+#nav>li{
+    display: inline-block;
+   
+}
+
+#nav li{
+    display: inline-block;
+    position: relative; 
+}
+
+#nav li a {
+    font-size: 18px;
+    line-height: 70px; /* nên cho nó bằng cái header */
+    padding: 0 20px;
+    text-decoration: none;
+    display: block;
+}
+
+#nav>li>a{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+}
+
+#nav > li:hover  > a {
+    color: rgb(241, 245, 22);
+   
+}
+
+/*
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background: linear-gradient(80deg,rgb(226, 129, 19),rgba(158, 167, 34, 0.897));
+    color: rgba(255, 255, 255, 0.548);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+    top: 100%;
+    left: 0;
+}
+
+
+
+#nav .subnav a{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .nav-arrow-down {
+    font-size: 20px;
+}
+
+*/
+
+/*#nav .subnav li:hover a ,*/
+
+#header .search-button {
+    float: right;
+    line-height: 70px; /* nên cho nó bằng cái header */
+    padding: 0 25px;
+    
+}
+
+#header .search-button:hover{
+    background-color: rgb(250, 165, 6);
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: white;
+    font-size: 20px;
+}
+
+
+
+#header> .info > .cap{
+    float: left;
+    text-align: center;
+    font-family: inherit;
+    line-height: 70px; /* nên cho nó bằng cái header */
+    padding: 0 25px;
+    font-weight: 200;
+    font-size: 20px;
+    color: rgba(253, 228, 0, 0.959);
+    cursor: pointer;
+}
+
+/* Phần Slider */
+#slider{
+    margin-top: 70px;
+    padding-top: 60%;
+    position: relative;
+    background: no-repeat url('/assets/img/esacanor-background-slider.jpg') top center / cover;
+}
+
+
+#slider .text-content {
+    color: rgb(250, 165, 6);
+    position: absolute;
+    text-align: center;
+    font-family: cursive;
+    width: 45%;
+    top: 30%;
+}
+
+#slider .text-heading {
+    font-weight: 700;
+    font-size: 46px;
+}
+
+#slider .text-decription {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+
+#slider .text-decription2 {
+    font-weight: 100;
+    font-size: 28px;
+    text-align: center ;
+    color: rgb(253, 167, 6);
+}
+
+/* Phần Content */
+#content{
+    background-color: rgba(4,4,4,255);
+    
+}
+
+#content .content-section {
+    color: rgb(253, 167, 6);
+    font-family: cursive;
+    padding: 65px 0 0px 5px;
+    text-align: justify;
+}
+
+#content .section-heading {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+    margin: 0 0 5px 0;
+}
+
+#content .sub-section-heading {
+    font-size: 16px;
+    font-weight: 100;
+    opacity: 0.9;
+    text-align: left;
+    margin: 0 0 5px 0;
+}
+
+#content .paragrapth {
+    font-size: 22px;
+    color: rgb(241, 245, 22);
+    line-height: 1.4; 
+    text-align: left;
+    margin: 0 0 5px 0;
+    /*
+    tiếng anh  1.4
+    tiếng việt 1.6
+    */
+}
+
+#content .section-mid {
+    margin-top: 50px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+    margin: 50px 0 5px 0;
+}
+
+
+#content .sub-section-mid{
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0.9;
+    text-align: left;
+    margin: 0 0 5px 0;
+}
+#content .section-caption {
+    padding: 60px 0;
+    color: rgb(245, 130, 22);
+    line-height: 1.4; 
+    text-align: center;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+
+/* Member  */
+#content .member-list {
+   padding: 50px 0 15px 0;
+   margin: 0 100px 0;
+   box-sizing: border-box;
+   /*overflow: hidden;*/
+}
+
+#content .member-item{
+    float: left;
+    text-align: center;
+    width: 33.33333%;
+}
+
+#content .member-name {
+    color: orange;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+
+#content .member-img {
+    width: 240px;
+    height: 240px;
+    max-width: 240px;
+    max-height: 240px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+#content .member-img:hover {
+    opacity: 0.6;
+}
+
+#content .member-cap {
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+
+/* Commands */
+#content .commands-item {
+
+    text-align: left;
+    color: rgb(253, 167, 6);
+    font-family: cursive;
+    padding: 65px 0 0px 5px;
+    text-align: justify;
+}
+
+#content  .commands-name {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+    color: orange;
+    margin: 0 0 5px 0;
+}
+
+#content .commands-text {
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0.9;
+    text-align: left;
+    margin: 0 0 5px 0;
+    color: rgb(241, 245, 22);
+}
+
+#content .commands-list {
+    font-size:20px;
+    color: rgb(241, 245, 22);
+    padding: 0 0 0 20px;
+}
+
+#content  .commands-nametag {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(241, 245, 22);
+}
+
+#content .commands-docs {
+    padding: 0 0 15px 0;
+}
+
+#content .item-nametag {
+    font-size: 32px;
+    color: orange;
+}
+
+#content .commands-img {
+   float: left;
+   width: 741px;
+   height: 588px;
+}
+/* Phần Footer */
+#footer{
+    background-color: rgba(4,4,4,255);
+    padding-top: 90px;
+    padding-bottom: 36px;
+    text-align: center;
+}
+
+#footer .socials-list a{
+    font-size: 30px;
+    padding: 0 3px;
+    color: rgb(245, 130, 22);
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover{
+   color: aqua;
+}
+
+#footer .copyright {
+    color: rgb(245, 130, 22);
+    padding-top: 5px;
+    font-size: 22px;
+}
+
+#footer .copyright a {
+    color: rgb(241, 245, 22);
+    text-decoration: none;
+    
+}
+
+
+
