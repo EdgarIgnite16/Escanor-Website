@@ -10,6 +10,7 @@ html {
     font-family: cursive;
     background-color: rgba(4,4,4,255);
     scroll-behavior: smooth;
+    
 }
 /* commons  */
 
@@ -44,6 +45,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
+    overflow: hidden;
 }
 /* Phần Navigation */
 
@@ -54,7 +56,6 @@ html {
 
 #nav>li{
     display: inline-block;
-   
 }
 
 #nav li{
@@ -70,15 +71,18 @@ html {
     display: block;
 }
 
-#nav>li>a{
+#nav>li>a{  
     color: rgba(255, 255, 255, 0.7);
     font-size: 22px;
 }
 
 #nav > li:hover  > a {
     color: rgb(241, 245, 22);
+    background-color: rgba(245, 160, 22, 0.89);
    
 }
+
+
 
 /*
 #nav .subnav {
@@ -90,8 +94,6 @@ html {
     top: 100%;
     left: 0;
 }
-
-
 
 #nav .subnav a{
     color: rgba(255, 255, 255, 0.7);
@@ -109,37 +111,26 @@ html {
 */
 
 /*#nav .subnav li:hover a ,*/
-
+#header .mobile-menu-button,
 #header .search-button {
     float: right;
     line-height: 70px; /* nên cho nó bằng cái header */
     padding: 0 25px;
-    
+    display: none;
 }
-
+#header .mobile-menu-button:hover,
 #header .search-button:hover{
     background-color: rgb(250, 165, 6);
     cursor: pointer;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: white;
     font-size: 20px;
 }
 
 
-
-#header> .info > .cap{
-    float: left;
-    text-align: center;
-    font-family: inherit;
-    line-height: 70px; /* nên cho nó bằng cái header */
-    padding: 0 25px;
-    font-weight: 200;
-    font-size: 20px;
-    color: rgba(253, 228, 0, 0.959);
-    cursor: pointer;
-}
 
 /* Phần Slider */
 #slider{
@@ -149,7 +140,7 @@ html {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    background-image: url('~assets/img/esacanor-background-slider.jpg');
+    background-image: url(/Escanor-Website-main/assets/img/esacanor-background-slider.jpg);
 }
 
 
@@ -184,13 +175,13 @@ html {
 /* Phần Content */
 #content{
     background-color: rgba(4,4,4,255);
-    
 }
 
 #content .content-section {
-    color: rgb(253, 167, 6);
     font-family: cursive;
-    padding: 65px 0 0px 5px;
+    color: rgb(253, 167, 6);
+    max-width: 100%;
+    padding: 70px 10px;
     text-align: justify;
 }
 
@@ -213,7 +204,7 @@ html {
     font-size: 22px;
     color: rgb(241, 245, 22);
     line-height: 1.4; 
-    text-align: left;
+    text-align: justify;
     margin: 0 0 5px 0;
     /*
     tiếng anh  1.4
@@ -272,8 +263,6 @@ html {
 #content .member-img {
     width: 240px;
     height: 240px;
-    max-width: 240px;
-    max-height: 240px;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -292,11 +281,10 @@ html {
 
 /* Commands */
 #content .commands-item {
-
     text-align: left;
     color: rgb(253, 167, 6);
     font-family: cursive;
-    padding: 65px 0 0px 5px;
+    padding: 70px 10px;
     text-align: justify;
 }
 
@@ -324,13 +312,13 @@ html {
 }
 
 #content  .commands-nametag {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: rgb(241, 245, 22);
 }
 
 #content .commands-docs {
-    padding: 0 0 15px 0;
+    padding: 0 10px 10px 0;
 }
 
 #content .item-nametag {
@@ -340,8 +328,8 @@ html {
 
 #content .commands-img {
    float: left;
-   width: 741px;
-   height: 588px;
+   width: 45%;
+   height: 45%;
 }
 /* Phần Footer */
 #footer{
@@ -356,10 +344,11 @@ html {
     padding: 0 3px;
     color: rgb(245, 130, 22);
     text-decoration: none;
+    opacity: 0.8;
 }
 
 #footer .socials-list a:hover{
-   color: aqua;
+    opacity: 1;
 }
 
 #footer .copyright {
@@ -371,7 +360,6 @@ html {
 #footer .copyright a {
     color: rgb(241, 245, 22);
     text-decoration: none;
-    
 }
 
 

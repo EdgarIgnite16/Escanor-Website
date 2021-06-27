@@ -5,32 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
     <link rel="shortcut icon" href="./assets/img/Escanor-Icon.png">
+    
     <title>Escanor Bot</title>
 </head>
 <body>
     <div id="main">
         <div id="header">
-            <!--Logo-->
-            <div class="info">
-                <div class="cap">
-                    <h3>Escanor</h3>
-                </div>
-            </div>
             <!-- Nav -->
             <ul id="nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#info">Info</a></li>
                 <li><a href="#commands">Commands</a></li>
                 <li><a href="https://discord.gg/47XNaf8Hep" target="_blank">Support Server</a></li>
-                
             </ul>
-            <!-- Nav -->
+            <!--mobile menu Button-->  
+            <div id="mobile-menu" class="mobile-menu-button">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+            
+            <!--Search Button-->           
             <div class="search-button">
                 <i class="search-icon ti-search"></i>
             </div>
-            <!--Search Button-->
+
+            
         </div>
 
         <div id="slider">
@@ -96,15 +97,14 @@
            <div id="commands" class="commands-item">
                <h2 class="commands-name">Commands</h2>
                <h5 class="commands-text">these are all the features my bot can use</h5>
-                <img src="./assets/img/commands.png" alt="Commands" class="commands-img">
-               <br><br><br>
                 <div>
                     <div class="commands-nametag">
-                        <p class="commands-docs"><strong class="item-nametag">Animal: </strong>This is the command to call out the super cute pet (I will update the other animals later) :> </p>
-                        <p class="commands-docs"><strong class="item-nametag">Moderator: </strong>This is a command that requires moderator rights of mods, this command is very special because it restricts the number of people who can use it and is only for members with privileged roles in the server !</p>
-                        <p class="commands-docs"><strong class="item-nametag">Feature: </strong>This is a universal command, because anyone can use this command, which allows users to use the bot's privileged features !</p>
-                        <p class="commands-docs"><strong class="item-nametag">Fun: </strong>Where there are funny commands !</p>
-                        <p class="commands-docs"><strong class="item-nametag">NFSW: </strong>And the last group of commands... we really don't want to add it... because this is 18+ command bruh !</p>
+                        <img src="./assets/img/commands.png" alt="Commands" class="commands-img">
+                        <p class="commands-docs"><strong class="item-nametag">Animal: </strong><br>This is the command to call out the super cute pet (I will update the other animals later) :> </p>
+                        <p class="commands-docs"><strong class="item-nametag">Moderator: </strong><br>This is a command that requires moderator rights of mods, this command is very special because it restricts the number of people who can use it and is only for members with privileged roles in the server !</p>
+                        <p class="commands-docs"><strong class="item-nametag">Feature: </strong><br>This is a universal command, because anyone can use this command, which allows users to use the bot's privileged features !</p>
+                        <p class="commands-docs"><strong class="item-nametag">Fun: </strong><br>Where there are funny commands !</p>
+                        <p class="commands-docs"><strong class="item-nametag">NFSW: </strong><br>And the last group of commands... we really don't want to add it... because this is 18+ command bruh !</p>
                     </div>
                 </div>
 
@@ -120,10 +120,47 @@
                 <a href="https://github.com/EdgarIgnite16" target="_blank"><i class="ti-github"></i></a>
                 <a href="https://www.youtube.com/channel/UCxdw9w03JaNFtwOPKN7DR8A" target="_blank"><i class="ti-youtube"></i></a>
             </div>
-            <p class="copyright">Powered by <a href="https://www.instagram.com/edgarrr16/" target="_blank">Edgar</a></p>
+            <p class="copyright">Copyright by <a href="https://www.instagram.com/edgarrr16/" target="_blank">Edgar</a></p>
         </div>
-   
-   
     </div>
+
+
+    <script>
+        var HeaderElement = document.getElementById('header');
+        var MobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = HeaderElement.clientHeight;
+        
+        MobileMenu.onclick = function() {
+           //console.log(HeaderElement.clientHeight)
+            var isClose = ( HeaderElement.clientHeight === headerHeight );
+            //console.log(isClose);
+            
+            // đóng mở mobile menu
+            isClose ? HeaderElement.style.height = 'auto' : HeaderElement.style.height = null ;
+        }
+
+        // tự động đóng khi click vào phần tử 
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        var menuLinks = document.querySelectorAll('#nav li a[href*="https"]');
+           
+            for(var i = 0 ; i < menuItems.length ; i++){
+                var menuItem = menuItems[i];
+                //console.log(menuItem);
+                menuItem.onclick = function () {
+                    HeaderElement.style.height = null 
+                }
+            }
+
+            for(var i = 0 ; i < menuLinks.length ; i++){
+                var menuLink = menuLinks[i];
+                //console.log(menuLink);
+                menuLink.onclick = function () {
+                    HeaderElement.style.height = null 
+                }
+            }
+
+
+           
+    </script>
 </body>
 </html>
